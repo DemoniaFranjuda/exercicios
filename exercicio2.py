@@ -1,10 +1,10 @@
-def somar_pares(lista):
+def somar_numeros(lista):
     total = 0
-    for i in lista:
-        
-            total += i
+    for numero in lista:
+         total += numero
     return total
 
 
 numeros = [1, 2, 3, 4, 5, 6]
-print(somar_pares(numeros))
+resultado = somar_numeros (numeros)
+print(resultado)

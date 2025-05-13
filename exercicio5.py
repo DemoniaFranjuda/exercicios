@@ -10,6 +10,8 @@ def obter_dados_aluno():
    nota02_aluno = int(input("Informe a Segunda Nota do Aluno: "))
    nota03_aluno = int(input("Informe a Terceira Nota do Aluno: "))
 
+   return cadastrar_aluno(nome_aluno, email_aluno, serie_aluno, nota01_aluno, nota02_aluno, nota03_aluno)
+
 def cadastrar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
 
 
@@ -29,7 +31,10 @@ def cadastrar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
    
     return alunos
 
+obter_dados_aluno()
+
 def mostrar_dados_alunos(dados_alunos):
-    return print(dados_alunos)
+ for aluno in dados_alunos:
+    print(f"Nome do Aluno: {aluno["nome"]}")
 
 mostrar_dados_alunos(alunos)
