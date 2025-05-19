@@ -1,4 +1,4 @@
-from exercicio4 import calcular_media
+from exercicio4 import calcularmedia
 
 alunos = []
 
@@ -22,7 +22,7 @@ def cadastrar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
         "email": email,
         "serie": serie,
         "notas": notas,
-        "media": calcular_media(notas)
+        "media": calcularmedia(notas)
    
     }
 
@@ -31,10 +31,22 @@ def cadastrar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
    
     return alunos
 
-obter_dados_aluno()
+
 
 def mostrar_dados_alunos(dados_alunos):
  for aluno in dados_alunos:
     print(f"Nome do Aluno: {aluno["nome"]}")
 
-mostrar_dados_alunos(alunos)
+ return
+
+def iniciar_sistema():
+   while True:
+      print("="*80)
+      print("Opção 1 => Mostrar lista de Alunos Cadastrados.")
+      print("Opção 2 => Cadastrar aluno.")
+      print("Opção 3 => Sair do sistema.")
+      print("="*80)
+
+      opcao = input("Escolha uma das opções acima: ")
+
+      iniciar_sistema() 
