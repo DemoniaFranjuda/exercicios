@@ -154,4 +154,4 @@ def iniciar_sistema():
             break
         else:
             print("Opcao invalida, escolha uma das opções no menu.")
-    iniciar_sistema()
+iniciar_sistema()
