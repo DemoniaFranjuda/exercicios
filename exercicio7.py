@@ -67,7 +67,7 @@ def iniciar_sistema():
                     break
                 else:
                     print("Opcao invalida, escolha uma das opções no menu.")
-iniciar_sistema()
+#iniciar_sistema()
 
 db_clientes = "db_clientes.json"
 # clientes = []
@@ -78,7 +78,7 @@ def carregar_dados():
         with open(db_clientes, "r", encoding="utf-8") as arq_json:
             return json.load(arq_json)
     else:
-        return [] 
+        return []
 
  
 def obter_dados_cliente():
@@ -131,11 +131,11 @@ def mostrar_dados_clientes():
               Telefone do Cliente{cliente["telefone do cliente"]}
               Celular do Cliente{cliente["celular do cliente"]}
               """)
-        
+       
 def iniciar_sistema():
     clientes = carregar_dados()
     while True:
-        
+       
         print("")
         print("="*80)
         print("Opcao 1 - Mostrar Lista de Clientes")
@@ -154,4 +154,4 @@ def iniciar_sistema():
             break
         else:
             print("Opcao invalida, escolha uma das opções no menu.")
-iniciar_sistema()
+    iniciar_sistema()
