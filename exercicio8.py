@@ -11,4 +11,4 @@ def carregar_dados():
         return []
 clientes = carregar_dados
 for cliente in clientes:
-   print(clientes)
+ print(clientes ["nome_completo"])

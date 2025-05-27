@@ -49,4 +49,4 @@ def iniciar_sistema():
 
       opcao = input("Escolha uma das opções acima: ")
 
-   iniciar_sistema()
+      iniciar_sistema() 

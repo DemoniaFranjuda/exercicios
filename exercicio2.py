@@ -1,7 +1,7 @@
 def somar_numeros(lista):
     total = 0
-    for numero in lista:
-         total += numero
+    for i in lista:
+         total += i
     return total
 
 
