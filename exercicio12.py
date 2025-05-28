@@ -16,17 +16,7 @@ def obter_dados():
     data = input("Informe a data do agendamento: ")
     horario = input("Informe o horário do agendamento: ")
     observacoes = input("Informe se há observações/especificações: ")
-
-    data_agendamentos ={
-        "nome": nome,
-        "servico": servico ,
-        "data": data,
-        "horario": horario, 
-        "observacoes": observacoes
-    }
-
-    return data_agendamentos
-
+    
 def cadastrar_agendamento(receber_agendamento):
     db_agendamentos = carregar_dados()
     db_agendamentos.append = (receber_agendamento)
