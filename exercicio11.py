@@ -67,6 +67,6 @@ def mostrar_veiculos(veiculos):
         else:
             print("Nenhum veículo cadastrado no momento.")
 
-iniciar_sistema()
+    iniciar_sistema()
 
 
