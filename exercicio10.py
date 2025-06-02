@@ -3,7 +3,7 @@ import os
 
 filmes = 'cadastro_filmes.json'
 
-def carregar_dados():
+def carregar_dados(receber_filmes):
     if os.path.exists(filmes):
         with open(filmes, "r", encondig="utf-8") as arq_json:
             return json.load(arq_json)
@@ -16,20 +16,18 @@ def obter_dados():
     descricao = input("Informe a descrição do filme:")
     categoria = input("Informe a categoria: ")
 
-    data_filme ={
+    data_filmes ={
         "nome": nome,
-        "classificacao": classificacao,
-        "descricao": descricao,
+        "classificação": classificacao,
+        "descrição": descricao,
         "categoria": categoria
     }
-
-    return data_filme
-
-def cadastrar_filme(receber_filme):
+ 
+def cadastrar_filme(receber_filmes):
     db_filmes = carregar_dados()
-    db_filmes.append(receber_filme)
+    db_filmes.append = carregar_dados(receber_filmes)
 
-    with open(filmes, "w", enconding="utf-8") as arq_json:
+    with open(filmes, "w", encoding="utf-8") as arq_json:
         json.dump(db_filmes, arq_json, indent=4, ensure_ascii=False)
 
 def mostrar_filmes(filmes):
@@ -44,8 +42,9 @@ def mostrar_filmes(filmes):
     else:
         print("Não existe nenhum filme cadastrado.")
 
-def iniciar_sistema():
+def iniciar_sistemar(receber_filmes):
     db_filmes = carregar_dados()
+    db_filmes.append = carregar_dados(receber_filmes)
 
     while True:
         print("")
@@ -66,5 +65,4 @@ def iniciar_sistema():
             break
         else:
             print("Opção invalida, escolha uma das opções do menu.")
-
 iniciar_sistema()

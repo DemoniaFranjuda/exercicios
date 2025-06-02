@@ -16,10 +16,18 @@ def obter_dados():
     data = input("Informe a data do agendamento: ")
     horario = input("Informe o horário do agendamento: ")
     observacoes = input("Informe se há observações/especificações: ")
-    
-def cadastrar_agendamento(receber_agendamento):
+
+    data_agendamentos ={
+        "nome": nome,
+        "servico": servico,
+        "data": data,
+        "horario": horario,
+        "observacoes": observacoes
+    }
+
+def cadastrar_agendamento():
     db_agendamentos = carregar_dados()
-    db_agendamentos.append = (receber_agendamento)
+    db_agendamentos.append = carregar_dados()
 
     with open(agendamentos, "w", encoding="utf-8") as arq_json:
         json.dump(db_agendamentos, arq_json, indent=4, ensure_ascii=False)
@@ -51,7 +59,7 @@ def mostrar_agendamentos(agendamentos):
         opcao = input("Escolha uma das opções do menu: ")
 
         if opcao == "1":
-            mostrar_agendamentos(mostrar_agendamentos)
+            mostrar_agendamentos(cadastrar_agendamento)
         elif opcao == "2":
             cadastrar_agendamento(obter_dados())
         elif opcao == "3":
@@ -60,4 +68,4 @@ def mostrar_agendamentos(agendamentos):
         else:
             print("Nenhum agendamento foi cadastrado no momento.")
 
-    iniciar_sistema()
+    iniciar_sistema() 

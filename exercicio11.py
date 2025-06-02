@@ -18,13 +18,11 @@ def obter_dados():
 
     data_veiculos ={
         "marca": marca,
-        "modelo": modelo ,
-        "ano": ano ,
-        "cor": cor 
+        "modelo":modelo,
+        "ano": ano,
+        "cor": cor
     }
-
-    return data_veiculos
-
+ 
 def cadastrar_veiculo(receber_veiculo):
     db_veiculos = carregar_dados()
     db_veiculos.append = (receber_veiculo)
@@ -46,6 +44,7 @@ def mostrar_veiculos(veiculos):
 
     def iniciar_sistema():
         db_veiculos = carregar_dados()
+        db_veiculos.append = carregar_dados()
 
     while True:
         print("")
@@ -68,5 +67,4 @@ def mostrar_veiculos(veiculos):
             print("Nenhum veículo cadastrado no momento.")
 
     iniciar_sistema()
-
-
+ 
